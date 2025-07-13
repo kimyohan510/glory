@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>영광병원</title>
+  <style>
+    :root {
+      --primary: #2EAF7D;
+      --secondary: #02353C;
+      --light: #f5f5f5;
+      --dark: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .header {
+      background: white;
+      padding: 1rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--secondary);
+    }
+
+    .nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav a {
+      color: var(--dark);
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to right, #f2f2f2, #eafaf5);
+      padding: 4rem 2rem;
+    }
+
+    .hero-text {
+      flex: 1 1 400px;
+      padding: 1rem;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #24956b;
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: #e0f7f0;
+    }
+
+    .hero-image {
+      flex: 1 1 400px;
+      height: auto;
+      padding: 1rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .services {
+      padding: 4rem 2rem;
+      background: #fff;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #02353C;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      padding: 1.5rem;
+      background-color: #f7fdfc;
+      border: 1px solid #d6ece5;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card h3 {
+      margin-bottom: 0.75rem;
+      color: #2EAF7D;
+    }
+
+    .footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .header-inner,
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-buttons a {
+        display: block;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">영광병원</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href=index.html>홈</a></li>
+          <li><a href="services.html">진료안내</a></li>
+          <li><a href=MyChart.html>마이차트</a></li>
+          <li><a href=status.html>대기현황</a></li>
+          <li><a href="location.html">오시는 길</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+      <div class="hero-text">
+        <h2>통증의 원인을 정확히 진단하여<br>질환의 근본부터 치료합니다</h2>
+        <p>운동치료, 언어치료, 로봇재활까지 — 전문 의료진이 함께합니다.</p>
+        <div class="hero-buttons">
+          <a href=login.html class="btn-primary">로그인</a>
+          <a href=services.html class="btn-outline">진료안내 보기</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="1.png" alt="병원 치료 사진">
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h2>진료 과목 안내</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>운동치료</h3>
+          <p>중추신경계 질환, 파킨슨병, 뇌졸중 환자 대상 전문 치료</p>
+        </div>
+        <div class="service-card">
+          <h3>언어치료</h3>
+          <p>삼킴 기능 향상을 위한 FDA 승인 전기자극 치료 적용</p>
+        </div>
+        <div class="service-card">
+          <h3>로봇재활</h3>
+          <p>로봇 보행 훈련 장비를 통한 최신 재활 치료 제공</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 영광병원. All rights reserved.</p>
+  </footer>
+</body>
+</html>

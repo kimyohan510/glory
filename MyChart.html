@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마이차트 일정</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      padding: 2rem;
+      color: #02353C;
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .calendar {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .day-header {
+      font-weight: bold;
+      padding: 0.5rem;
+      background: #e6f2ef;
+      border-radius: 6px;
+    }
+
+    .day {
+      background: #e9f7f2;
+      padding: 1rem;
+      border-radius: 8px;
+      min-height: 100px;
+      position: relative;
+    }
+
+    .today {
+      border: 2px solid #2EAF7D;
+      background: #d7f5eb;
+    }
+
+    .treatment {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #2EAF7D;
+    }
+
+    .time-slot {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 0.3rem;
+    }
+
+    .btn-reserve, .btn-back {
+      display: block;
+      margin: 2rem auto 0;
+      padding: 0.75rem 2rem;
+      background-color: #2EAF7D;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-reserve:hover, .btn-back:hover {
+      background-color: #24956b;
+    }
+
+    .username {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .month-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .month-nav button {
+      background: none;
+      border: none;
+      color: #2EAF7D;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .month-nav button:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <h2>마이차트 일정</h2>
+    <p class="username">홍길동 님의 치료 일정입니다.</p>
+    <div class="month-nav">
+      <button>&lt; 6월</button>
+      <h3>2025년 7월</h3>
+      <button>8월 &gt;</button>
+    </div>
+    <div class="calendar-grid">
+      <div class="day-header">일</div>
+      <div class="day-header">월</div>
+      <div class="day-header">화</div>
+      <div class="day-header">수</div>
+      <div class="day-header">목</div>
+      <div class="day-header">금</div>
+      <div class="day-header">토</div>
+
+      <div class="day"></div>
+      <div class="day">1<div class="treatment">운동치료</div><div class="time-slot">오전 10:00</div></div>
+      <div class="day">2<div class="treatment">언어치료</div><div class="time-slot">오후 2:00</div></div>
+      <div class="day today">3<div class="treatment">로봇재활</div><div class="time-slot">오전 9:30</div></div>
+      <div class="day">4</div>
+      <div class="day">5<div class="treatment">운동치료</div><div class="time-slot">오후 1:30</div></div>
+      <div class="day">6</div>
+
+      <div class="day">7</div>
+      <div class="day">8<div class="treatment">로봇재활</div><div class="time-slot">오전 11:00</div></div>
+      <div class="day">9</div>
+      <div class="day">10<div class="treatment">언어치료</div><div class="time-slot">오후 4:00</div></div>
+      <div class="day">11</div>
+      <div class="day">12<div class="treatment">운동치료</div><div class="time-slot">오전 10:00</div></div>
+      <div class="day">13</div>
+
+      <div class="day">14</div>
+      <div class="day">15</div>
+      <div class="day">16</div>
+      <div class="day">17<div class="treatment">로봇재활</div><div class="time-slot">오후 3:30</div></div>
+      <div class="day">18</div>
+      <div class="day">19</div>
+      <div class="day">20</div>
+
+      <div class="day">21</div>
+      <div class="day">22</div>
+      <div class="day">23<div class="treatment">언어치료</div><div class="time-slot">오후 2:30</div></div>
+      <div class="day">24</div>
+      <div class="day">25</div>
+      <div class="day">26</div>
+      <div class="day">27</div>
+
+      <div class="day">28<div class="treatment">운동치료</div><div class="time-slot">오전 9:00</div></div>
+      <div class="day">29</div>
+      <div class="day">30<div class="treatment">로봇재활</div><div class="time-slot">오전 11:30</div></div>
+      <div class="day"></div>
+      <div class="day"></div>
+      <div class="day"></div>
+      <div class="day"></div>
+    </div>
+    <a href="index.html" class="btn-back">홈으로 돌아가기</a>
+  </div>
+</body>
+</html>

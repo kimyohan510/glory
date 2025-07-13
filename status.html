@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대기 현황</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+      color: #02353C;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .status-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #e6f6f2;
+      padding: 1rem 1.5rem;
+      border-left: 5px solid #2EAF7D;
+      border-radius: 8px;
+    }
+
+    .status-info {
+      flex: 1;
+    }
+
+    .status-info strong {
+      font-size: 1.2rem;
+    }
+
+    .status-info span {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .bar-container {
+      width: 160px;
+      height: 14px;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-left: 1.5rem;
+    }
+
+    .bar {
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+
+    .bar.red {
+      width: 90%;
+      background-color: #e74c3c;
+    }
+
+    .bar.yellow {
+      width: 60%;
+      background-color: #f1c40f;
+    }
+
+    .bar.green {
+      width: 30%;
+      background-color: #2ecc71;
+    }
+
+    .btn-back {
+      display: block;
+      margin: 2rem auto 0;
+      padding: 0.75rem 1.5rem;
+      background-color: #2EAF7D;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background-color: #24956b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>오늘의 대기 현황</h1>
+
+    <div class="status-box">
+      <div class="status">
+        <div class="status-info">
+          <strong>운동치료</strong>
+          <span>현재 대기 인원: 3명</span>
+          <span>예상 대기 시간: 약 15분</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar red"></div>
+        </div>
+      </div>
+
+      <div class="status">
+        <div class="status-info">
+          <strong>언어치료</strong>
+          <span>현재 대기 인원: 1명</span>
+          <span>예상 대기 시간: 약 5분</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar green"></div>
+        </div>
+      </div>
+
+      <div class="status">
+        <div class="status-info">
+          <strong>로봇재활</strong>
+          <span>현재 대기 인원: 2명</span>
+          <span>예상 대기 시간: 약 10분</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar yellow"></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn-back">홈으로 돌아가기</a>
+  </div>
+</body>
+</html>
+
